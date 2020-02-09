@@ -67,7 +67,7 @@ console.log(plus);
 
 const title = document.getElementById("title");
 title.innerHTML = "Hi castle";
-title.style.color = "red";
+//title.style.color = "red";
 console.dir(title);
 console.dir(document);
 document.title = "i am castle";
@@ -76,4 +76,78 @@ document.title = "i am castle";
 //querySelector 노드의 첫번째 자식을 반환
 const title2 = document.querySelector("#title");
 title2.innerHTML ="Hello castle";
-title2.style.color = "white";
+//title2.style.color = "black";
+
+// function handleResize(event){
+//     console.log(event);
+//     // console.log("I HAVE been resized");
+// }
+
+// window.addEventListener("resize", handleResize);
+
+
+// function handleclick(){
+//     if (document.getElementById("title").style.color == "blue"){
+//         title.style.color = "black";
+//         return;
+//     }
+//     title.style.color = "blue";
+//
+// }
+//
+//
+// title.addEventListener("click", handleclick);
+
+
+// const BASE_COLOR = "rgb(52, 73, 94)";
+// const OTHER_COLOR = "#7f8c8d";
+//
+// function handleclick(){
+//     const currentColor = title.style.color;
+//     if (currentColor === BASE_COLOR){
+//         title.style.color = OTHER_COLOR;
+//     } else{
+//         title.style.color = BASE_COLOR;
+//     }
+// }
+//
+// function init(){
+//     title.style.color = "BASE_COLOR";
+//     title.addEventListener("click", handleclick);
+// }
+//
+// init();
+
+//classlist.contanins = 해당클래스이름비교
+// const CLICKED_CLASS = "clicked";
+//
+// function handleclick(){
+//     const hasClass = title.classList.contains(CLICKED_CLASS);
+//     console.log(hasClass);
+//     if (!hasClass){
+//         // title.className = CLICKED_CLASS;
+//         title.classList.add(CLICKED_CLASS);
+//
+//     } else{
+//         title.classList.remove(CLICKED_CLASS);
+//     }
+// }
+//
+// function init(){
+//     title.addEventListener("click", handleclick);
+// }
+// init();
+
+
+const CLICKED_CLASS = "clicked";
+
+function handleclick(){
+    const hasClass = title.classList.toggle(CLICKED_CLASS);
+    console.log(hasClass);
+}
+
+function init(){
+    title.addEventListener("click", handleclick);
+}
+init();
+
